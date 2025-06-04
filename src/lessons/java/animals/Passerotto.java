@@ -37,10 +37,12 @@ public class Passerotto extends AbstractAnimal {
     }
 
     // metodi astratti della superclasse da implementare
+    @Override
     public void verso() {
         System.out.println(getName() + " dice: cip cip cip  (il passerotto sta cinguettando)");
     }
 
+    @Override
     public void mangia() {
         Random rand = new Random();
         int eat = rand.nextInt(3);
@@ -52,6 +54,14 @@ public class Passerotto extends AbstractAnimal {
             System.out.println(getName() + " sta mangiando semi di miglio");
         }
 
+    }
+
+    // metodo per ottenere la scheda del passerotto
+    @Override
+    public String toString() {
+        return ("PASSEROTTO: \n" + super.toString() + " grammi" + "\n" + "Piumaggio: " + this.plumageType
+                + "\nApertura alare: "
+                + this.wingSpan + " cm");
     }
 
 }

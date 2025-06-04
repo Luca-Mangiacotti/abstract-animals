@@ -38,10 +38,12 @@ public class Delfino extends AbstractAnimal {
     }
 
     // metodi astratti della superclasse da implementare
+    @Override
     public void verso() {
         System.out.println(getName() + " dice: psssss!  (il delfino si avvicina alla superficie dell'acqua)");
     }
 
+    @Override
     public void mangia() {
         Random rand = new Random();
         int eat = rand.nextInt(3);
@@ -53,6 +55,14 @@ public class Delfino extends AbstractAnimal {
             System.out.println(getName() + " sta mangiando una seppia");
         }
 
+    }
+
+    // metodo per ottenere la scheda del passerotto
+    @Override
+    public String toString() {
+        return ("DELFINO: \n" + super.toString() + " kg" + "\n" + "Famiglia: " + this.dolphinFamily
+                + "\nLunghezza pinna: "
+                + this.finLenght + " cm");
     }
 
 }

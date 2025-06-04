@@ -37,10 +37,12 @@ public class Aquila extends AbstractAnimal {
     }
 
     // metodi astratti della superclasse da implementare
+    @Override
     public void verso() {
         System.out.println(getName() + " dice: Kiai! (Strido dell'aquila)");
     }
 
+    @Override
     public void mangia() {
         Random rand = new Random();
         int eat = rand.nextInt(3);
@@ -52,6 +54,13 @@ public class Aquila extends AbstractAnimal {
             System.out.println(getName() + " sta mangiando un pesciolino");
         }
 
+    }
+
+    // metodo per ottenere la scheda dell' aquila
+    @Override
+    public String toString() {
+        return ("AQUILA: \n" + super.toString() + " kg" + "\n" + "Piumaggio: " + this.plumageType + "\nApertura alare: "
+                + this.wingSpan + " cm");
     }
 
 }

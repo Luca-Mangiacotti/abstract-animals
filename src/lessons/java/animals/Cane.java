@@ -37,10 +37,12 @@ public class Cane extends AbstractAnimal {
     }
 
     // metodi astratti della superclasse da implementare
+    @Override
     public void verso() {
         System.out.println(getName() + " dice: Arf! Arf! (il cane sta abbaiando)");
     }
 
+    @Override
     public void mangia() {
         Random rand = new Random();
         int eat = rand.nextInt(3);
@@ -52,6 +54,13 @@ public class Cane extends AbstractAnimal {
             System.out.println(getName() + " sta mangiando un osso");
         }
 
+    }
+
+    // metodo per ottenere la scheda del cane
+    @Override
+    public String toString() {
+        return ("CANE: \n" + super.toString() + " kg" + "\n" + "Colore del pelo: " + this.furColor + "\nTaglia: "
+                + this.size);
     }
 
 }

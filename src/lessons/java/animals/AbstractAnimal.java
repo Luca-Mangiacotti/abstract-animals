@@ -51,7 +51,18 @@ public abstract class AbstractAnimal {
 
     // metodi concreti
     public void dormi() {
-        System.out.println("ZzZzZz");
+        System.out.println(this.name + ": ''ZzZzZz'' ...(sta dormendo)");
     };
+
+    // metoto per ottenere la scheda dell'animale
+    @Override
+    public String toString() {
+        if (this.name != null) {
+            return ("Nome: " + this.name + "\n" +
+                    "Età: " + this.age + "anni, Peso: " + this.weight);
+        } else {
+            return "Errore";
+        }
+    }
 
 }
