@@ -1,5 +1,8 @@
 package lessons.java.animals;
 
+import lessons.java.animals.interfaces.Natanti;
+import lessons.java.animals.interfaces.Volanti;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Abstarct-Animals");
@@ -28,5 +31,16 @@ public class Main {
         rosa.dormi();
         rosa.nuota();
         iberica.vola();
+
+    }
+
+    // metodi che scaturiscono i comportamento di tutti gli oggetti che implementano
+    // quell'interfaccia
+    static void faiVolare(Volanti animaleVolante) {
+        animaleVolante.vola();
+    }
+
+    static void faiNuotare(Natanti animaleNuotante) {
+        animaleNuotante.nuota();
     }
 }
