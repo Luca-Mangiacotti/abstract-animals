@@ -59,7 +59,7 @@ public abstract class AbstractAnimal {
     public String toString() {
         if (this.name != null) {
             return ("Nome: " + this.name + "\n" +
-                    "Età: " + this.age + "anni, Peso: " + this.weight);
+                    "Età: " + this.age + " anni, Peso: " + this.weight);
         } else {
             return "Errore";
         }

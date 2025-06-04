@@ -2,7 +2,9 @@ package lessons.java.animals;
 
 import java.util.Random;
 
-public class Passerotto extends AbstractAnimal {
+import lessons.java.animals.interfaces.Volanti;
+
+public class Passerotto extends AbstractAnimal implements Volanti {
 
     private String plumageType;
     private float wingSpan;
@@ -62,6 +64,11 @@ public class Passerotto extends AbstractAnimal {
         return ("PASSEROTTO: \n" + super.toString() + " grammi" + "\n" + "Piumaggio: " + this.plumageType
                 + "\nApertura alare: "
                 + this.wingSpan + " cm");
+    }
+
+    // metodi dell'interfaccia
+    public void vola() {
+        System.out.println(getName() + " sta volando!");
     }
 
 }

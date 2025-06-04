@@ -20,13 +20,13 @@ public class Main {
         bulldog.mangia();
         bulldog.dormi();
         System.out.println(reale.toString());
-        System.out.println(iberica.toString());
         iberica.mangia();
         System.out.println(italiano.toString());
         System.out.println(inglese.toString());
-        System.out.println(zifio.toString());
         zifio.mangia();
         System.out.println(rosa.toString());
         rosa.dormi();
+        rosa.nuota();
+        iberica.vola();
     }
 }

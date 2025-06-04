@@ -2,7 +2,9 @@ package lessons.java.animals;
 
 import java.util.Random;
 
-public class Delfino extends AbstractAnimal {
+import lessons.java.animals.interfaces.Natanti;
+
+public class Delfino extends AbstractAnimal implements Natanti {
 
     // dolphin family = Oceanic or River
     private String dolphinFamily;
@@ -63,6 +65,11 @@ public class Delfino extends AbstractAnimal {
         return ("DELFINO: \n" + super.toString() + " kg" + "\n" + "Famiglia: " + this.dolphinFamily
                 + "\nLunghezza pinna: "
                 + this.finLenght + " cm");
+    }
+
+    // metodi dell'interfaccia
+    public void nuota() {
+        System.out.println(getName() + " sta nuotando!");
     }
 
 }

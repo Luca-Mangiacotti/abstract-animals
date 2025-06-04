@@ -2,7 +2,9 @@ package lessons.java.animals;
 
 import java.util.Random;
 
-public class Aquila extends AbstractAnimal {
+import lessons.java.animals.interfaces.Volanti;
+
+public class Aquila extends AbstractAnimal implements Volanti {
 
     private String plumageType;
     private float wingSpan;
@@ -61,6 +63,11 @@ public class Aquila extends AbstractAnimal {
     public String toString() {
         return ("AQUILA: \n" + super.toString() + " kg" + "\n" + "Piumaggio: " + this.plumageType + "\nApertura alare: "
                 + this.wingSpan + " cm");
+    }
+
+    // metodi dell'interfaccia
+    public void vola() {
+        System.out.println(getName() + " sta volando!");
     }
 
 }
